@@ -36,4 +36,3 @@ Type of computer network architecture:
          *The client interacts with application server instead of communicating directly with database.
          *The application server processes requests, applies business logic, and retrieves or stores data in database.
          *This structure enhances security because the database is not directly exposed to clients.
- 
