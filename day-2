@@ -1,0 +1,51 @@
+ 2). peer-to-peer (p2p) architecture :  
+        *In p2p nodes act as both cilent andd server. a server node supply resourse and everybody from network of nodes can trade resoures with others. 
+         *in this system every node has a equal role.
+         * there is no central server in the network.
+         * Each node working independently.
+         *internet relay chat was the first P2P network built to share text and chat. 
+       type of p2p network;
+         1. unstructured p2p : easy to build , connected randomly in the network,unstructured,difficult to find content.
+         2. Structured p2p : designed using software  that creates a virtual layer in order to put the nodes in a specific structure . not easy to set up but can easy access to users.
+         3. Hybird p2p : it combines both p2p and clinet-server architectures .
+         * do not involve a large number of nodes usually less than 12.computers store own data but it accessible by group.
+         *if node increasee it requires specialized software.
+         *node act as both there is constant threat of attack.
+        working ;
+          *it creates a virtual network of p2p application users.
+          *The user then downloads the file, which is received in bits that come from multiple computers in network that have already that file.
+           *The data is also sent from the user's computer to other computers in network that ask for data that exist on user's computer.
+           application ; file sharing and blockchain.
+         Three levels of p2p:
+          1 level; use USB to create p2p network between two system 
+          2 level; use copper wire to connect more than two system
+          3 level; use software to establish protocol to manage more device across internet.
+  network device :
+          1. Router : Functions as a networking device that connects multiple networks and directs data between them
+          *Connects local networks to the internet
+          *Determines the best path for data packets
+          *Uses IP addresses to forward data correctly
+          2. Switch : Connects devices within the same network and manages internal data communication.
+          *Connects computers, printers, and servers
+          *Sends data only to the intended device
+          3. Hub : Acts as a basic device that connects multiple devices within a network.
+          *Broadcasts data to all connected devices
+          *Does not filter or manage traffic
+          4. Bridge : Connects two network segments and filters traffic between them.
+          *Reduces unnecessary data transmission
+          *Works using MAC addresses
+          5. Gateway : Connects two different networks that use different protocols.
+          *Translates data between different systems
+          *Enables communication between dissimilar networks
+          *Commonly used to connect private networks to external networks
+          6. Access Point (AP) : Provides wireless connectivity to devices in a network.
+          *Extends a wired network into Wi-Fi
+          *Allows mobile devices to connect wirelessly
+          *Improves network coverage area
+          7. Modem : Converts digital data into signals suitable for transmission and vice versa.
+          *Connects a home or office network to the ISP
+          *Converts digital signals to analog and back     
+          8. Firewall : Security device that monitors and controls network traffic.
+          *Blocks unauthorized access
+          *Filters incoming and outgoing data
+          *Protects networks from cyber threats     
