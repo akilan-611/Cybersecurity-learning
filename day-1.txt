@@ -1,0 +1,39 @@
+Basics of computer network
+       computer network is a collection of interconnected devices that communicate each other to exchange data and resources.
+    *node-physical devices.
+    *routers and switche contorl the flow of information.
+    *transmision media -carry data (one device to another).
+Working :  
+  Computer network operates by communicate and exchange data using communication system.
+    *A network consists of nodes and these nodes are connected throught links(cables, wifi).
+    *When data is sent, it broken into small packets and transmitted across the network.
+    *Protocols define how data packets are formatted, transmitted, received, and acknowledged.
+    *Each device is identified by a unique IP address, which ensures data reaches the correct destination.
+    *Network devices like switches and routers forward data packets along the best available path.
+    *Security mechanisms, such as firewalls, monitor traffic and allow or block data based on security rules.
+Type of computer network architecture:
+  1). client-server architecture:
+              In this architecture client send request and servers process the requests return the responds.
+      * Client- a device that request data
+      * Server- a system that stores data, manages data, and responds to client requests.
+    Working :  
+      *Request response mechanism-communication follows a structured cycle — client requests, server responds.
+      *Centralized management: data and services are controlled from servers.
+      *Servers can handle many clients at the same time using concurrent request handling.
+    Browser Interacts With a Server :
+      *User enters URL in browser.
+      *Browser performs a DNS lookup to convert the domain name into IP address.
+      *Browser establishes a connection and sends a HTTP/HTTPS request to server using IP.
+      *Server responds with website resources like HTML, CSS, JavaScript, and images.
+      *Browser renders the webpage by processing these files and displaying content.
+  Types of Client-Server Architecture :
+     1). 2-tier architecture ;
+         *the client communicates directly with the server, it responsible for processing and data storage.
+         *it consists of two layer , the client handles the UI and some process before send data, the servers process request andmanage data .
+         *it is for small applications.
+     2). 3-tier architecture ;
+         *the system divided into three layers(presentation layer, application layer, data layer )
+         *The client interacts with application server instead of communicating directly with database.
+         *The application server processes requests, applies business logic, and retrieves or stores data in database.
+         *This structure enhances security because the database is not directly exposed to clients.
+ 
