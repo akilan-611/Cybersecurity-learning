@@ -1,20 +1,26 @@
 protocol - the hidden rules ensuring the nodes request reaches the correct server
 sneakernet- trransfer data using USB or flabby disk
-node(phone)'request'-->link(wifi)--> protocol(http request)'process'  .then response return to node in same way
+node(phone)'request'-->link(wifi)--> protocol(http request)'process'  
+then response return to node in same way.
 internet and network are not same. internet is a global network of network
 ANATOMY OF NETWORK:
      network are devided by physical size and geographical reach .
   1).LAN(local area network) :
-     LAN is a network confined to a small, specific physical area. It connects devices in a single building or a campus.
+     LAN is a network confined to a small, specific physical area. 
+     It connects devices in a single building or a campus.
   2).WAN(wide area network) :
      WAN spans massive geographical distances
   3).PANs (Personal Area Networks) :
      like Bluetooth headphones connecting to phone.
   4).MANs (Metropolitan Area Networks) : 
      like a city-wide public Wi-Fi grid.
-inetnet is the ultimate wan and it connect mutiple pan and wan togather.it is public. anyone with ISP can join it . put a server in internet anyone can talk to it.
+inetnet is the ultimate wan and it connect mutiple pan and wan togather.
+it is public, anyone with ISP can join it .
+put a server in internet anyone can talk to it.
 INTRANET - it is a private network ,same technology as inetrnet but a group of people only access it .
 ISP (inetrnet service provider) :
     it is a bridge to connect LAN to WAN.
-    modern malware author and ransameware gangs use p2p network because there is no central server . if one peer off the another peer are route around the network.
+p2p network :
+    modern malware author and ransameware gangs use p2p network because there is no central server .
+    if one peer off the another peer are route around the network.
     it is favorite for malware c2 networks .
