@@ -1,0 +1,45 @@
+Linux commands :
+    1) ls(used to list files) - ls -l(long lighting format,- for perrmission),ls -la(all files ,hidden f),(dot . 'hidden'). 
+    2) cd - change directory, .. (move 1 back), ~ (go home)
+    3) cat - display file content , combine multi files , cat /path/"f" (for full path),
+    4) file - determine the type of a file
+    5) du - estimate and track the space consumed by files
+    6) find - search for files ,./* (human readable),-type f(regular f),-user (user name),-group(group name),-size (000 c , c=bits),-executable(! for not executable), find / (rood directory)
+    7) grep - search text patterns (find specific string, filters output)
+    8) exit -to exit
+    9) clear - clear terminal
+    10) man - command manual, q (quit)
+     
+Bandit passwords :        
+lv 1. 
+    ls
+    cat
+    6y2kwnwK6grgvwvpvLaa2T1cpFEKOhNR
+lv 2. 
+    ls
+    cat ./
+    PK8fYLZg2hnHSz83plBL1iEPKdD3QToB
+lv 3. 
+    ls
+    cat ./"name"
+    7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME
+lv 4. 
+    ls
+    cd 
+    ls -a
+    xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq
+lv 5. 
+    ls
+    cd
+    ls 
+    cat
+    6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG
+lv 6. 
+    ls
+    cd
+    find . -type f ! -executable - size 1033c
+    pXa26xhMWaC2SvDotA4r9EgZkulOeSBW
+lv 7.
+    find / -type f -user bandit7 -group bandit6 -size 33c
+    cat 
+    Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
