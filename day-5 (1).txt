@@ -1,0 +1,77 @@
+OSI (open system interconnection) : 
+      it is a conceptual framework that standardizes how different computing systems communicate over a network.it is the universal language of networking.
+      When a network breaks, the OSI model tells exactly where it broke. It is the ultimate troubleshooting map. Nobody actually builds networks using the OSI model.
+      real internet runs on the TCP/IP mode.
+     OSI divided into 7 layers .
+ layer 7 : application( the interface )
+         close to end user, software applications interact with network.it is not a application ,application uses http protocol to communicate.
+         it is playvround web attack.SQL injection,cross-site scripting,vulnerable API are operating at layer 7.
+         code is poorly written attacker can manipulate Layer 7 protocols to steal data or execute commands.
+ layer 6 : presentation (translator)
+         it act as the translator.takes data from Application layer and formats it into a standard syntax.it handles encryption,decryption and compression.
+         padlock icon L6 in action.Protocols like SSL/TLS operate here to encrypt web traffic. If a defender captures network traffic and it looks like
+         unreadable gibberish, it’s because Layer 6 did its job and encrypted the payload.
+   encryption - normal massage---> meaningless massage (converting proccess)
+   dacryption - meaningless massage---> normal massage 
+ layer 5 : session (conversation manager)
+        It establishes, maintains, and terminates the "session" between two devices.It handles synchronization.In session hijacking attacker doesn't need to steel your 
+        password. Instead they steal session token(a digital ID).
+   synchronization - ensure data consistensy,prevent race conditions and avoid deadlocks in a multi-proces environment. 
+ layer 4 : transport (reliable mover)
+         ent-to-ent delivery using TCP/UDP and ports. it handle segments(massive data --> manageable pieces)
+   TCP(transmission control protocol):  Reliable. It performs a "3-way handshake" to ensure the connection is solid, numbers the segments, and demands an 
+         acknowledgment for every piece of data sent. If a packet is lost, TCP resends it.                                                                                                                                                          
+   UDP (user datagram protocol): Fast and reckless. It just fires the data off without checking if it arrived. Used for live video streaming and DNS queries 
+         where speed matters more than perfection
+   ports-like apartment numbers,they tell the receiving computer exactly which application data is.
+   port scaning - when run Nmap it reveal service run on a target,you are knocking on Layer 4 ports a stateful firewalls operate at Layer 4 to deciding 
+         whether allow or block traffic based on port number and state of TCP connection.
+ layer 3 : network(navigator)
+        it handle logical addressing(IP), routing. take segmentsc from Layer 4 wraps them into Packets.packet's header contains Source IP and Destination IP.
+   router-determine the most efficient path to forward the packet across multiple interconnected networks to reach its final destination IP.
+   Attackers-use IP Spoofing to forge source IP address of a packet, hiding their identity or launching DDoS attacks. 
+   Defenders-use Layer 3 Access Control Lists (ACLs) on routers to block malicious IP addresses.
+ layer 2 : data link(local courier)
+        it operate in LAN.it handle physical addressing using MAC addresses (the permanent, physical serial number burned into your network card).
+        it takes Packets from Layer 3 and wraps them into Frames.   
+   switches-it forward a frame to destination MAC address in correct physical port to reach the specific device on the local network.operate in layer 2
+   ARP Spoofing attack-a hacker on the same Wi-Fi sends fake Layer 2 messages, tricking the router into sending all the victim's traffic to hacker's laptop instead. 
+        it is the classic Man-in-the-Middle (MITM) attack.
+ layer 1 : physical(hardware)
+        it is physical stuff like copper Ethernet cables,fiber optic lines,radio waves of a Wi-Fi signal,physical network interface cards (NICs)
+        layer 1 takes the Frames from Layer 2 and converts them into raw electrical voltages, light pulses, or radio frequencies—known as Bits (1s and 0s)—and transmits
+        them across the physical medium.
+OSI model -created by academics to be perfect standard.
+TCP/IP -build by engineers and military(DARPA) it is real world implementation of networking.
+ Encapsulation-process of how data is packaged and shipped across the globe.
+4 layer of TCP/IP :
+ 1). Application layer(OSI layer 5,6,7 combined)
+        session management, data formatting, and the application interface TCP/IP lumps them all together.it handle  high-level protocols, representation, and 
+        user interaction.
+      protocols-HTTP,FTP,DNS,SMTP,SSH.
+ 2). Transport layer(OSI layer 4)
+        It is the engine of end-to-end communication.it Handles reliability, flow control, and port addressing.
+      protocols:TCP,UDP.
+ 3). internet layer(OSI layer 3)
+        connect different networks together to form the global Internet.it Handles logical addressing (IP) and routing packets across multiple networks.
+      Protocols:IPv4,IPv6,ICMP,ARP.
+ 4). The Network Access/Link Layer(OSI Layers 1,2 combined)
+         it combines physical hardware and local data framing into one layer.it Handles physical addressing (MAC), framing, and the actual transmission
+         of bits over the physical medium.
+      Protocols/Standards:Ethernet,Wi-Fi(802.11),PPP.
+Data Encapsulation: The Russian Nesting Dolls :
+         As the data moves down the stack, each layer adds its own specific header (and sometimes a trailer) to the data. This process is called Encapsulation.
+         application data-->transport header-->internet header-->header/trailer.
+         when the data reach destination,server decapsulates it by layer-by-layer.
+Protocol Data Units (PDUs) :
+         data changes its "packaging" at every layer, data have different name depending on which layer it is currently at. These are called Protocol Data Units (PDUs).
+         L1-data is called data
+         L2-segment(for TCP) or datagram (for UDP)
+         L3-packet
+         L4-frame , finally frome --> bits.
+Tunneling and Evasion :
+         encapsulation is fundamental concept for bypassing security controls. Because each layer just blindly accepts payload from layer above it,
+         attackers can hide malicious traffic inside legitimate traffic. This is called Tunneling or Encapsulation Evasion.
+
+        
+            
