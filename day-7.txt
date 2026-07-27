@@ -1,0 +1,44 @@
+ICMP (internet control massege protocol) :
+      feedback for network. not carry data ,its carry control ,diagnostic and error msg.
+   router encounters problem in IP,packet generate ICMP error msg sent back to source IP.
+Destination Unreachable (T 3) :
+      firewall bolck traffic router send back unreachable msg.
+Time exceeded (T 11) :
+      IP build in lifespan TTL(time to live)(start 64,128) ,dereases by 1 every time pass over router.
+      if TTL is 0 before reach target. router drop it send ICMP to sender.
+Ping(heartbeat of network) :
+      tool for check host and measuring speed of connection.two type
+      1) echo request .
+      2) echo reply
+      it use stopwatch it give RTT(round trip time)
+   defenders use silent treatment.
+Traceroute : Mapping 
+      it manipulates the TTL field to force routers to reveal their IP addresses via ICMP Time Exceeded messages by decreace TTL by 1,
+      mapping the path to a destination.
+      firewall block all ICMP .network would break ,so it allow ICMP
+   attackers-use ICMP tunneling,reconnaissance ,flood to reveal victim data and IP>
+layer 4 - it use port num to deliver data to right place. use two type protocols(TCP,UDP) .
+    port multiplexing : single ip can have thousands of simultaneous conversation happen at same time.it is port multiplexing.
+    16-bits ranging from 0 to 65,535.
+    well-known ports(0-1023): standrad system.web 80 http or 443 https.email 25 SMTP.secure shell 22.
+    Registered Ports(1024-49151):applications databases.
+    Dynamic/Private Ports (49152-65535):for local machine when you initiate outbound connection.
+    Attacker -use Nmap to perform port scan to reveal data.
+TCP :
+    guarantees delivery through strict, connection-oriented process.                   
+    it establish reliabl connection via 3-way handshake.
+  1. SYN(synchronize) : cilent send packet with SYN flag.
+  2. SYN-ACK : server receive SYN, , allocates resources, and responds with both SYN and ACK flags.
+  3. ACK(acknowledge) : client send final ACK packet back.
+ after complete handshake data begin to flow.
+Reliability Features
+    Once connected, TCP ensures perfect delivery:
+    Sequencing: Every segment is numbered. If segments arrive out of order, TCP reassembles them correctly.
+    Acknowledgments (ACKs): The receiver must send an ACK for every chunk of data received.
+    Retransmissions:sender doesn't receive ACK within a certain timeframe, it assumes packet was lost and resends it.
+  defenders use stateful firewall for search SYN handshake inside network but never saw it then drop the packets.
+UDP :
+    opposite to TCP .no handshake .no acknomledgments ,no sequencing.it doesn't care data .keep sending.
+    it  is connectionless and unreliable also fast.used in DNS queries VoIP & video call . online gaming.
+  Defenders rely on TCP's predictable handshake for stateful firewall rules, while attackers abuse UDP's lack of authentication for DDoS amplification and spoofing.
+ 
