@@ -1,0 +1,43 @@
+The Data alink layer :
+         ultimate local courier.  relies on two critical components: MAC Addresses and the ARP Protocol.only cares about data not mediater.
+MAC Address :(hardware fingerprint)
+         IP address is logical. it can change depends on network.MAC address (Madia Access Control)is physical.A MAC address is a 48-bit number burned directly into
+         firmware of your Network Interface Card (NIC) at factory. It is permanent, unchangeable fingerprint of hardware.in hexadecimal,separated by : 
+         48 bits-->2 haives.
+   OUI(Organizationally Unique Identifier - I 24 bits identify manufacturer.
+   NIC specific : II 24 bits are unique serial num assing by manufacturer.
+        defender use MAC filtering,MAC address useful for network inventory and tracking physical device locations.
+     wifi understand MAC not IP.
+ARP(address resolution protocol) :
+         ARP is bridge between IP AND MAC.it work  in two-step process.
+1) ARP request(broadcast) :
+         it check local memory (ARP cache),already knows MAC .doesn't shouts out entire local network via a broadcost.
+2) ARP reply(unicast) :
+         every device in LAN receive broadcast.device hold IP respond.send a direct unicast reply device save this mapping in ARP cache, now data > packet > frame
+         > access wire.
+ARP spoofing :
+         ARP stateless,blindly trust we ARP spoofing to trick device into sending traffic to attacker enabling local man-in-the-middle attack .
+    defender-use DAI(dynamic ARP inspection)
+MAC - burned into hardware
+IP - assign by software can change depends where was it.
+IPv4 :(backbone of internet)
+    32 bits num , 32-pure binary not human readable . divided into 4(4x8) convert to decimal called dotted-decimal natotion. 192:162:1:10
+  The anatomy of IP : Ip not random num .split into two parts
+    1)the network position : identify network device belong to 
+    2)host position : identify device network.
+Subnet mask : 
+    determine where metwork postion end ,host postion begine 
+subnetting : dividing and conquering 
+ CIDR notation (classess inter-domain routing ).
+    network engineer use CIDR to shorthand counts num of 1's in subnet mask.
+ Blast radius : subnetting is core security stratecy it use network segmentsation .so reduce blast radius.
+ public IP - is global internet 
+ private IP(RFC) - not readable on public internet
+ NAT(network address transtation)- home router use NAT 
+    request > strips it > replace > replace with public IP > inernet > response.
+IPv6 : (future,present)
+    128 bits , hexadecimal ,separat by eliminating address  exhaustion and broadcast ,but introduce new seanity blinds pots if firewall not configured to inspect 
+    IPv6-no broadcast ; (shouting to everyone on the network) use multicast and anycast 
+simplified header : fast for route process 
+SLAAC(stateless address autoconfiguration) : device auto generate own IPv6 based route prefix and MAC without DHCP server attacher use IPv6 tunneling.          
+ 
