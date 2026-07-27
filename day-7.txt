@@ -40,5 +40,6 @@ Reliability Features
 UDP :
     opposite to TCP .no handshake .no acknomledgments ,no sequencing.it doesn't care data .keep sending.
     it  is connectionless and unreliable also fast.used in DNS queries VoIP & video call . online gaming.
-  Defenders rely on TCP's predictable handshake for stateful firewall rules, while attackers abuse UDP's lack of authentication for DDoS amplification and spoofing.
+  Defenders rely on TCP's predictable handshake for stateful firewall rules, while attackers abuse UDP's lack of 
+  authentication for DDoS amplification and spoofing.
  
