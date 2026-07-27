@@ -1,4 +1,4 @@
-The Data alink layer :
+The Data link layer :
          ultimate local courier.  relies on two critical components: MAC Addresses and the ARP Protocol.only cares about data not mediater.
 MAC Address :(hardware fingerprint)
          IP address is logical. it can change depends on network.MAC address (Madia Access Control)is physical.A MAC address is a 48-bit number burned directly into
